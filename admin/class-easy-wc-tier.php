@@ -54,7 +54,7 @@ class WC_Product_Tier {
 	 * @param int $value Attribute position.
 	 */
 	public function set_position( $value ) {
-		$this->data['position'] = absint( $value );
+		$this->data['tier_position'] = absint( $value );
 	}
 
 	/**
@@ -117,7 +117,7 @@ class WC_Product_Tier {
 	 * @return int
 	 */
 	public function get_position() {
-		return $this->data['position'];
+		return $this->data['tier_position'];
 	}
 
 	/**

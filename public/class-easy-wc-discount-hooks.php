@@ -72,15 +72,18 @@ class EASY_Wc_Public_Cart_Discount_Hooks {
 
 			$discount_type   = '';
 			$discount_amount = 0;
+			$i               = 1;
 
 			foreach ( $pricing_tiers['tier_position'] as $tier_number ) {
-				// var_dump( $pricing_tiers['max_qty'][ $tier_number ] );
-
-				if ( ( $cart_item['quantity'] >= $pricing_tiers['min_qty'][ $tier_number ] && $cart_item['quantity'] <= $pricing_tiers['max_qty'][ $tier_number ] ) || ( $cart_item['quantity'] >= $pricing_tiers['min_qty'][ $tier_number ] && '-1' === $pricing_tiers['max_qty'][ $tier_number ] ) ) {
+				if (
+					( $cart_item['quantity'] >= $pricing_tiers['min_qty'][ $tier_number ] && $cart_item['quantity'] <= $pricing_tiers['max_qty'][ $tier_number ] )
+					|| $i === count( $pricing_tiers['tier_position'] )
+					) {
 					$discount_type   = $pricing_tiers['ewt_discount_type'][ $tier_number ];
 					$discount_amount = $pricing_tiers['discount'][ $tier_number ];
 					break;
 				}
+				++$i;
 			}
 			if ( $discount_type && $discount_amount ) {
 

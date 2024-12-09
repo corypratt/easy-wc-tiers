@@ -137,14 +137,12 @@
 				index,
 				el
 			) {
-				$( '.tier_position', el ).val(
-					parseInt(
-						$( el ).index(
-							'.product_tiers .woocommerce_tier'
-						),
-						10
-					)
-				);
+				let i = parseInt( $( el ).index('.product_tiers .woocommerce_tier' ), 10 );
+				$( '.attribute_position', el ).val(i).attr('name', 'tier_position[' + i + ']');
+				$('.min-qty', el).attr('name', 'min_qty[' + i + ']');
+				$('.max-qty', el).attr('name', 'max_qty[' + i + ']');
+				$('.discount-type', el).attr('name', 'ewt_discount_type[' + i + ']');
+				$('.discount', el).attr('name', 'discount[' + i + ']');
 			} );
 		}
 	
