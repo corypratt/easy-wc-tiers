@@ -35,7 +35,7 @@ class EASY_Wc_Public_Cart_Discount_Hooks {
 
 		add_filter( 'woocommerce_cart_item_price', array( &$this, 'cart_item_price' ), 10, 3 );
 
-		add_action( 'woocommerce_before_mini_cart_contents', array( &$this, 'calculate_cart_totals', 10 ) );
+		add_action( 'woocommerce_before_mini_cart_contents', array( &$this, 'calculate_cart_totals' ), 10 );
 
 	}
 

@@ -33,5 +33,8 @@ e.g.
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed a poorly added hook priority.
+
 = 1.0 =
 * Initial commit.

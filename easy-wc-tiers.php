@@ -16,7 +16,7 @@
  * Plugin Name:       Easy WC Tiers
  * Plugin URI:        https://lonemill.com
  * Description:       Simple pricing tiers for WooCommerce
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Cory Pratt
  * Author URI:        https://lonemill.com/
  * License:           GPL-2.0+
